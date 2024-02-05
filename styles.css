@@ -68,6 +68,8 @@ There are a few different values for this property */
     transform: rotate(300deg); 
   }
 
+  /* Short Hand:  animation property will set the animation-name, animation-duration, 
+  animation-timing-function, and animation-iteration-count properties in that order */
   .cabin {
     background-color: red;
     width: 20%;
@@ -75,6 +77,7 @@ There are a few different values for this property */
     position: absolute;
     border: 2px solid;
     transform-origin: 50% 0%;
+    animation: cabins 10s linear infinite;
   }
 
   .cabin:nth-of-type(1) {
@@ -120,8 +123,17 @@ There are a few different values for this property */
   @keyframes wheel {
     0% {
         transform: rotate(0deg);
-      }
+    }
     100% {
          transform: rotate(360deg);
-       }
+    }
   }
+
+  @keyframes cabins {
+    0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
